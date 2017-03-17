@@ -1,0 +1,73 @@
+<!--
+Name: 			Jesse Truong
+Student #: 		1222722
+Student ID: 	truonj8
+Project:		4WW3 - Project Part 2 - Client-Side, Dynamic
+Updated:		October 31st, 2016
+-->
+
+<!DOCTYPE html>																				<!--sets doc to HTML-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Jesse Truong">
+		<meta name="description" content="submission web page for flex zone">
+		<meta name="keywords" content="submission, form, flex, zone, gym">
+		<link href="project.css" rel="stylesheet" type="text/css"/>							<!--link to my css for formatting-->
+		<script src="project.js"></script>
+		<script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+		<title>Flex Zone</title>															<!--sets the tab text on a window-->
+	</head>
+	<body>
+		<div id="wrapper">																	<!--wrapper used to pack everything together-->
+			<div id="login">																<!--div tag to create the login bar-->
+				<ul>
+					<li><a href="login.html">Login</a></li>									<!--login bar at the top-->
+					<li><a href="registration.html">Sign Up</a></li>
+				</ul>
+			</div>
+			<div id="header">																<!--header area where the name of the site is located with images-->
+				<div id="leftarm">															<!--container for the left arm-->
+					<img src="images/leftflex.png">
+				</div>
+				<div id="titleflex">														<!--container for the name of website. had to use nbsp because an actual space was causing the name to split into two lines on smaller resolutions-->
+					<h1>FLEX&nbsp;ZONE</h1>
+				</div>
+				<div id="rightarm">															<!--container for right bicep-->
+					<img src="images/rightflex.png">
+				</div>
+			</div>
+			<div id="menu">																	<!--container for the menu bar below the title which includes the search bar-->
+				<ul>																		<!--menu is created in a list to keep items in line with each other-->	
+					<a href="results_sample.html"><img src="images/searchicon.png"></a>		<!--users must press on the icon to search which currently brings them to the results page-->
+					<li><input type="search" placeholder="Search"></li>						<!--menu is listed backwards so it displays correctly from left to right-->
+					<li><a href="search.html">Home</a></li>
+					<li><a href="submission.html">Submit</a></li>
+					<li><a href="">Profile</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<div id="mainpage">
+				<div id="submissionform">														<!--container for the main part of the page-->
+					<h2>Submit Your Gym!</h2>
+					<form>																		<!--create a form that allows for users to enter in various different information to submit their gyms-->		
+						Name of Gym:<br>
+						<input type="text" name="gymname" id="gym" placeholder="E.g. GoodLife Fitness" required pattern="[A-Za-z0-9]+" title="Must only contain letters and numbers"autofocus><br><br>	<!--text input for gym name-->
+						Description of Gym:<br>
+						<textarea placeholder="Describe your gym in 400 characters" required></textarea><br><br>				<!--text area in order to create a box that allows for users to type and text to automatically wrap around once at the end of the box-->
+						Location of Gym:<br>
+						<input type="text" id="latsub" name="gymcoordinates" placeholder="&deg N" required pattern="^[+-]?\d+(\.\d*)?" title="Must be a number">&nbsp;<input type="text" id="lonsub" name="gymcoordinates" placeholder="&deg E" required pattern="^[+-]?\d+(\.\d*)?" title="Must be a number">	<!--text input for the latitudes and longitudes of the gym-->
+						<input type="button" name="searcharound" value="Map" onclick="getLocation('submission')"><br>
+						<div id="mapholder">
+						</div><br>
+						Attach Images: <input type="file" name="gymimages" accept="image/*"><br><br>		<!--file input to allow users to open a dialogue box to search for images to upload. only accepts files that are image formats e.g. png jpg etc.-->
+						<input type="submit" name="gymsubmit" value="Submit">										<!--submit input type to create a submit button-->
+					</form>
+				</div>
+			</div>
+			<div id="footer">																<!--container for the footer that appears on every page-->
+				Jesse Truong&nbsp;1222722&nbsp;truonj8@mcmaster.ca
+			</div>
+		</div>
+	</body>
+</html>

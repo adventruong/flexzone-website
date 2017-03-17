@@ -1,0 +1,119 @@
+<!--
+Name: 			Jesse Truong
+Student #: 		1222722
+Student ID: 	truonj8
+Project:		4WW3 - Project Part 2 - Client-Side, Dynamic
+Updated:		October 31st, 2016
+-->
+
+<!DOCTYPE html>																				<!--sets doc to HTML-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Jesse Truong">
+		<meta name="description" content="sample result page for flex zone">
+		<meta name="keywords" content="results, list, search, sample, flex, zone, gym">
+		<link href="project.css" rel="stylesheet" type="text/css"/>							<!--link to my css for formatting-->
+		<script src="project.js"></script>
+		<title>Flex Zone</title>															<!--sets the tab text on a window-->
+	</head>
+	<body>
+		<div id="wrapper">																	<!--wrapper used to pack everything together-->
+			<div id="login">																<!--div tag to create the login bar-->
+				<ul>
+					<li><a href="login.html">Login</a></li>									<!--login bar at the top-->
+					<li><a href="registration.html">Sign Up</a></li>
+				</ul>
+			</div>
+			<div id="header">																<!--header area where the name of the site is located with images-->
+				<div id="leftarm">															<!--container for the left arm-->
+					<img src="images/leftflex.png">
+				</div>
+				<div id="titleflex">														<!--container for the name of website. had to use nbsp because an actual space was causing the name to split into two lines on smaller resolutions-->
+					<h1>FLEX&nbsp;ZONE</h1>
+				</div>
+				<div id="rightarm">															<!--container for right bicep-->
+					<img src="images/rightflex.png">
+				</div>
+			</div>
+			<div id="menu">																	<!--container for the menu bar below the title which includes the search bar-->
+				<ul>																		<!--menu is created in a list to keep items in line with each other-->	
+					<a href="results_sample.html"><img src="images/searchicon.png"></a>		<!--users must press on the icon to search which currently brings them to the results page-->
+					<li><input type="search" placeholder="Search"></li>						<!--menu is listed backwards so it displays correctly from left to right-->
+					<li><a href="search.html">Home</a></li>
+					<li><a href="submission.html">Submit</a></li>
+					<li><a href="">Profile</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<div id="mainpage">
+				<div id="searchresults">														<!--container for the main portion of the screen, the search results-->
+					<h3>12 Results Returned from "Hamilton"</h3>
+					<div id="resultsmap" style="width:100%;height:500px">
+						<script src="https://maps.googleapis.com/maps/api/js?callback=mapResult"></script>
+					</div><br><br>
+					<table>																		<!--results are displayed in a tabular format because that's how the professor wanted it-->
+						<tr>																	<!--also because it's easier this way :)-->
+							<th>Gym</th>
+							<th>Location</th>
+							<th>Description</th>
+							<th>Rating</th>
+						</tr>
+						<tr>
+							<td><a href="individual_sample.html">The Pulse Fitness Centre</a></td>			<!--each row has the title which links to the object page, an image of the map which links to the actual google maps page, a description of the gym and an average rating-->
+							<td>
+								<a href="https://www.google.ca/maps/place/David+Braley+Sport+Medicine+and+Rehabilitation+Centre+at+McMaster+University/@43.2644636,-79.9160332,18z/data=!3m1!5s0x882c9b54611c1201:0x4fcdd5667f653865!4m5!3m4!1s0x882c9b4d12232fe9:0xd27e5792b28a2803!8m2!3d43.2649601!4d-79.916564" target="_blank"><img src="images/pulse.jpg" alt="Pulse Fitness"></a>
+							</td>
+							<td>The Pulse is McMaster University's fitness centre and we have just what you need to lead a healthy, and active lifestyle. Our certified staff members have the skills and enthusiasm to put you on the road to a healthier you, no matter what your current fitness level, what your individual interes are, what your personal goals are, or your limited availability. We offer numerous educational workshops and fitness programs that guarantee Fun, Friendship and Fitness!</td>
+							<td>9/10</td>
+						</tr>
+						<tr>
+							<td><a href="individual_sample.html">World Gym Hamilton</a></td>
+							<td>
+								<a href="https://www.google.ca/maps/place/World+Gym+Hamilton/@43.2559862,-79.9351857,17z/data=!4m5!3m4!1s0x882c84bbc43b46f9:0x41b3fc6ff935b3fb!8m2!3d43.2565488!4d-79.9344454" target="_blank"><img src="images/worldgym.jpg" alt="World Gym"></a>
+							</td>
+							<td>World Gym Hamilton Mountain is part of the team of over 200 World Gyms worldwide in 18 different countries. There are now over 30 World Gyms in Canada and more continue to open every month. World Gym's low price of only $10 per month makes it affordable for everyone to get healthy and feel better about themselves.</td>
+							<td>8/10</td>
+						</tr>
+						<tr>
+							<td><a href="individual_sample.html">Alchemy CrossFit Hamilton</a></td>
+							<td>
+								<a href="https://www.google.ca/maps/place/Alchemy+CrossFit/@43.2580401,-79.8925747,17z/data=!4m5!3m4!1s0x882c9b6640982d45:0xf7a81de0f78d81c5!8m2!3d43.2584169!4d-79.8928426" target="_blank"><img src="images/alchemy.jpg" alt="Alchemy CrossFit"></a>
+							</td>
+							<td>CrossFit is the fastest growing program in health and fitness. At Alchemy CrossFit we focus on functional fitness through weightlifting, body weight exercises and high intensity cardio. We are the go-to fitness facility in Hamilton for strength and conditioning, weight loss, and real results. Alchemy is more than a gym, it is a community of learning, support and motivation to accomplish your goals.</td>
+							<td>7.2/10</td>
+						</tr>
+						<tr>
+							<td><a href="individual_sample.html">Allure Fitness Inc.</a></td>
+							<td>
+								<a href="https://www.google.ca/maps/place/Allure+Fitness+Inc/@43.261879,-79.9044441,18z/data=!4m5!3m4!1s0x882c9b5bdc850957:0x993c03ba3c8f08d3!8m2!3d43.2623186!4d-79.9043076" target="_blank"><img src="images/allurefitness.jpg" alt="Allure Fitness"></a>
+							</td>
+							<td>Allure Fitness Inc. is a ladies only studio, offering group fitness classes, personal training and private lessons – but this is no ordinary gym… You often neglect yourself when working, running your household, and going about your life. We understand you need a little escape, and are pleased to offer you a chance to do so with us, in a discreet setting for ladies only. Allure Fitness Inc. is Hamilton’s Hottest Dance & Fitness Studio, where we offer options to suit every woman’s workout needs.  We decided that the gym was boring, and we wanted to make exercise so fun and fabulous that you will be inspired to get fit in no time!</td>
+							<td>7/10</td>
+						</tr>
+						<tr>
+							<td><a href="individual_sample.html">GoodLife Fitness</a></td>
+							<td>
+								<a href="https://www.google.ca/maps/place/GoodLife+Fitness/@43.2053793,-79.897525,17z/data=!3m1!4b1!4m5!3m4!1s0x882c9a96a0a9e477:0x7f6c387161ed8556!8m2!3d43.2053754!4d-79.8953363" target="_blank"><img src="images/goodlife.jpg" alt="GoodLife Fitness"></a>
+							</td>
+							<td>At GoodLife Fitness you have access to modern facilities, state-of-the-art equipment, motivating group fitness classes, as well as supportive, friendly and knowledgeable staff who are here to help and guide you along your journey. With over 350 locations across Canada and more opening soon, GoodLife is proud to offer welcoming environments that are fit for any fitness level.</td>
+							<td>8.5/10</td>
+						</tr>
+						<tr>
+							<td><a href="individual_sample.html">YMCA of HBB</a></td>
+							<td>
+								<a href="https://www.google.ca/maps/place/Hamilton+Downtown+Family+YMCA/@43.2541825,-79.8720565,17z/data=!3m1!4b1!4m5!3m4!1s0x882c9b9ceceabb59:0x1db9943e2a241e1!8m2!3d43.2541825!4d-79.8698678" target="_blank"><img src="images/ymca.jpg" alt="YMCA of HBB"></a>
+							</td>
+							<td>Our expert staff and volunteers are always available to support and guide you to positive outcomes, every step of the way. And when you choose the YMCA, you get the added benefit of being part of our community — because it’s important to feel safe and welcome while working to improve your health. Being active improves many aspects of life  - mental, emotional, social and physical.</td>
+							<td>8.5/10</td>
+						</tr>
+					</table>
+					<a href=""><p>Load More...</p></a>											<!--Load more hyperlink for when there are more results-->
+				</div>
+			</div>
+			<div id="footer">																<!--container for the footer that appears on every page-->
+				Jesse Truong&nbsp;1222722&nbsp;truonj8@mcmaster.ca
+			</div>
+		</div>
+	</body>
+</html>

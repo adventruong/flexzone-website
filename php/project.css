@@ -1,0 +1,315 @@
+/*
+Name: 			Jesse Truong
+Student #: 		1222722
+Student ID: 	truonj8
+Project:		4WW3 - Project Part 2 - Client-Side, Dynamic
+Updated:		October 31st, 2016
+*/
+
+body{
+	background-color: #6D8383;						/*set the background colour of the whole page*/
+	font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;	/*set the font family for the whole page*/
+	color: white;									/*set the colour of all text to white on the page*/
+}
+
+a{													/*css for all <a> tag links on the page (except when specified per div tag)*/
+	color: white;									/*set the hyperlink colours to white (instead of purple when clicked on*/
+}
+
+a:hover{											/*css for all a:hover links on the page except when specified*/
+	color: lightblue;
+}
+
+h2{													/*set the properties of all h2 and h3 headings across pages*/
+	font-size: 25px;
+	height: 0px;
+	padding: 20px;
+}
+
+h3{
+	font-size: 20px;
+	height: 0px;
+	padding: 15px;
+}
+
+input{												/*add margins at the bottom to every input tag*/
+	margin-bottom: 10px;
+}
+
+input:focus{										/*set the background colour and add a border to every input tag when focused*/
+	background-color: lightblue;
+	border: 2px solid white;
+	border-radius: 2px;
+}
+
+form input{											/*set all input form tags to a certain height and font size*/
+	height: 30px;
+	font-size: 14px;
+}
+
+form input[type=submit]{							/*set all form submit buttons to a certain width, font size, and cursor to pointer*/
+	width: 20%;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+#wrapper{											/*wrapper used to contain the sign up bar, the header, the navigation menu, the main page and the footer together*/
+	width: 80%;										/*wrapper is set to 80% width in order to maintain sizing for scaling of all parts*/
+	margin-left: auto;								/*margins left and right of the wrapper are automatically set*/
+	margin-right: auto;
+	min-width: 1000px;								/*minimum width of the wrapper is 1000px in order to allow for rescaling of the website but not to a point where the format of the page starts to look out of place*/
+}
+
+#header{											/*header settings for the title of the website*/
+	height: 110px;									/*height is set to that the nav menu and everything below is closer to the title for aesthetic purposes*/
+	text-align: center;								/*center the text of the title*/
+	background-color: #6D8383;						/*set the background colour to be the same as the overall page to blend in*/
+	display: flex;									/*set display to flex in order to keep the three items in the header in line with one another*/
+	justify-content: center;						/*set justify-content to be center in order to have the images and the text next to each other at all times regardless of movement*/
+}
+
+#header h1{											/*change the text in the header*/
+	margin: 20px;									/*set margins in order to keep seperation from the images and the text*/
+	font-size: 80px;								/*font size is nice and big for users to see*/
+	text-shadow: 2px 2px blue;						/*create a slight shadow underneath the text to make it less plain and stand out more*/
+}
+
+#leftarm img{										/*changes to the left bicep in the header*/
+	width: 115px;									/*set width and height to maintain a good resolution for the picture*/
+	height: 115px;									/*having these scale with the page causes the images to become distorted and unproportional - isnt appealing*/
+}
+
+#rightarm img{										/*changes to the right bicep in the header*/
+	width: 115px;									/*set width and height to maintain a good resolution for the picture*/
+	height: 115px;									/*having these scale with the page causes the images to become distorted and unproportional - isnt appealing*/
+}
+
+#mainpage{											/*container for each of the main pages*/
+	text-align: center;								/*align the text to be centered*/
+	background: #202727;							/*set the background colour of the section*/
+	width: 98%;										/*set width and height of the page to percentages for scaling*/
+	height: 100%;									
+	margin: auto;									/*set margins to be auto*/
+	border-style: solid;							/*set border properties for the page*/
+	border-width: 4px;
+	border-color: #202727;
+}
+
+#footer{											/*footer menu at the bottom of the page*/
+	height: 20px;									/*height of the footer menu to keep it small*/
+	padding: 10px;									/*padding to add spacing around the text to keep the footer bar larger than the font size*/
+	text-align: center;								/*align the text to be centered*/
+	background-color: #202727;						/*set the background colour to make the menu bars and the main page for a nicer look*/
+	font-size: 14px;								/*set font size of footer*/
+	margin: 10px;									/*set margins to add spacing between main page and the footer*/
+}
+
+#login{												/*login bar at the top*/
+	width: 100%;									/*set the width to be a percentage in order to when resizing the screen*/
+}
+
+#login ul{											/*css for underordered lists under the login div*/
+	list-style-type: none;							/*gets rid of the bullets on the side*/
+	margin: 10px;									/*margins to format the login bar*/
+	background-color: #202727;						/*set the background color to make the main page, nav menu and footer for a nicer look*/
+	height: 45px;									/*set the height of the list to match with the bar*/
+	font-size: 14px;								/*set font size of the text*/
+}
+
+#login li a{										/*css for the <a> tags in the list*/
+	color: white;									/*set the font colour to white to match the rest of the page*/							
+	padding: 14px 16px;								/*set padding around the text to make it look nicer and to fit within the bar*/
+	float: right;									/*float the text to the right to make it look like nicer*/
+}
+
+#login li a:hover{									/*hover property for <a> tags in the login div*/
+	background-color: #111;						    /*set the background colour to a lighter/faded black to be visible when on top of the button*/
+}
+
+#menu{												/*css for the menu bar*/
+	width: 100%;									/*set the width of the menu bar to be a percentage for easier scaling when changing resolutions*/
+}
+
+#menu ul{											/*css for the unordered lists in the menu bar*/
+	list-style-type: none;							/*gets rid of the bullet buttons*/
+	margin: 10px;									/*set margins of the list*/
+	padding: 0px;									/*padding set to 0px moves the items in the unordered lists over to the left (where the bullet points would have been)*/
+	background-color: #202727;						/*change the background colour of the unordered lists to match the background*/				
+	height: 50px;									/*set the height of the list*/
+}
+
+#menu li a{											/*css for the <a> tags in the list items in the menu bar*/
+	float: left;									/*float the <a> tags left*/
+	padding: 15px 16px;								/*set the padding to make the "button" the same size as the menu bar and to provide spacing around the text*/
+}
+
+#menu li a:hover{
+	background-color: #111;							/*make the text a different colour when hovering in order to distinguish what the users can press and cannot*/
+}
+
+#menu li input[type=search]{						/*css for the search bar in the menu bar*/
+	margin-top: 10px;								/*set the top margin to move the bar into the middle of the menu bar*/
+	padding: 10px;									/*set the padding to move the text placeholder over a bit*/
+	width: 14%;										/*set the width of the search bar to be a percentage in order to shrink with scaling*/
+	border: 2px solid grey;							/*create a border around the search bar for aesthetics*/
+	border-radius: 4px;								/*make the corners round*/
+	font-size: 14px;								/*set the font size of the text in the search bar*/
+	float: right;									/*float the search bar to the right for appeal*/
+	height: 30px;									/*change the height of the search bar*/
+}
+
+#menu img{											/*search bar icon*/
+	margin-top: 10px;								/*move the icon in line with the search bar*/
+	float: right;									/*float the image to the right of the search bar*/
+	width: 30px;									/*set a fix width and height for the search icon*/
+	height: 30px;
+}
+
+#searchpage input[name=searcharound]{
+	width: 20%;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+#searchpage form input[name=searchname]{			
+	width: 18%;										/*set the width of the keywords search bar*/
+}
+
+#searchpage form select{
+	width: 10%;										/*set the widths of the dropdown menus*/
+	height: 20px;									/*set a fixed height for the dropdown menus*/
+	font-size: 14px;								/*set the font size for the dropdown menus*/
+}
+
+#searchresults table{
+	border: 1px solid white;						/*set the border settings*/
+	border-collapse: collapse;
+	width: 100%;									/*set the width to be able to scale easily as a percentage*/
+}
+
+#searchresults th{
+	border: 1px solid white;						/*set the border settings*/
+	padding: 10px;
+}
+
+#searchresults td{
+	border: 1px solid white;						/*set the border settings*/
+}
+
+#searchresults td img{
+	width: 150px;									/*set the width and height of the maps in the table*/
+	height: 150px;
+}
+
+#searchresults td a{
+	text-decoration: none;							/*remove the underline from the <a> tags in the table*/
+}
+
+#submission table, th, td{
+	border-style: none;								/*remove the border from the whole page since the table is strictly used for formatting*/
+}
+
+#submission table{
+	width: 100%;									/*set the width of the table to a percentage in order to scale with the rest of the page*/
+}
+
+#submission th{
+	font-size: 25px;								/*set the font size of the header to be different from the rest of the page*/
+	padding: 10px;									/*add padding to the header of the tables to create spacing around the text*/
+}
+
+#submission td{
+	padding: 5px;									/*create padding around the text in the cells*/
+}
+
+#submission td a{
+	text-decoration: none;							/*remove the underlines in the table*/
+}
+
+#submission td img{
+	width: 99%;										/*set the width and height of the main picture to scale with the resolution changes*/
+	height: 100%;
+}
+
+#submission form textarea{
+	width: 50%;										/*set the width to scale*/
+	height: 150px;									/*set the height to a fixed value to keep the box nice and tall*/
+	border: 2px solid white;						/*set the border properties*/
+	border-radius: 2px;
+	font-size: 15px;								/*change the font size inside the box*/
+	font-family: Helvetica;							/*change the font inside the box*/
+	box-sizing: border-box;							
+	resize: none;									/*remove the resizing option of the text box*/
+}
+
+#hoursreviews{										/*container used to keep the reviews and hours together in line*/
+	display: flex;									/*set the display to flex in order to keep the two items together side by side*/
+	justify-content: right;						/*justify-content is set to centered to keep the two in the middle of the page*/
+}
+
+#hours h3{
+	text-align: center;								/*center the text of Hours*/
+}
+
+#hours table{										/*format the table for hours of operations*/
+	font-size: 15px;
+	border-style: solid;							/*set border properties around the hours*/
+	border-width: 2px;
+	width: 250px;									/*set the width of the hours table to a fixed length because I don't want it changing with scaling*/
+	margin: 10px;									/*set the margins around the table so it doesn't touch the side of the main page*/									
+}
+
+#hours td{
+	padding: 5px;									/*create some spacing around the text in the hours table*/
+}
+
+#reviews table{
+	padding: 5px;									/*add some spacing around the table to keep it from touching the side of the main page as well as the hours table*/
+	width: 100%;									/*width is a percentage to help with scaling along with the main page*/
+	
+} 
+
+#reviews td img{									/*set constant image sizes for the account pictures*/
+	width: 100px;
+	height: 100px;
+}
+
+#submissionform form textarea{
+	width: 50%;										/*set the width to scale*/
+	height: 150px;									/*set the height to a fixed value to keep the box nice and tall*/
+	border: 2px solid white;						/*set the border properties*/
+	border-radius: 2px;
+	font-size: 15px;								/*change the font size inside the box*/
+	font-family: Helvetica;							/*change the font inside the box*/
+	box-sizing: border-box;							
+	resize: none;									/*remove the resizing option of the text box*/
+}
+
+#submissionform form input[name=gymname]{
+	width: 18%;										/*set the widths of the text field*/
+}
+
+#submissionform form input[name=latcoordinates]{
+	width: 5%;										/*set the widths of the text field*/
+}
+
+#submissionform form input[name=loncoordinates]{
+	width: 5%;										/*set the widths of the text field*/
+}
+
+#registrationpage form input[type=radio]{
+	height: 15px;									/*set the height of the radio buttons on the register page*/
+}
+
+#registrationpage form input[name=email]{
+	width: 20%;										/*set the widths of the text field*/
+}
+
+#loginpage form input{
+	width: 20%;										/*set the widths of the text field*/
+}
+
+#mapholder{
+	margin-right: auto;
+	margin-left: auto;
+}

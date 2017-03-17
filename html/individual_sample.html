@@ -1,0 +1,166 @@
+<!--
+Name: 			Jesse Truong
+Student #: 		1222722
+Student ID: 	truonj8
+Project:		4WW3 - Project Part 2 - Client-Side, Dynamic
+Updated:		October 31st, 2016
+-->
+
+<!DOCTYPE html>																				<!--sets doc to HTML-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Jesse Truong">
+		<meta name="description" content="individual sample web page for flex zone">
+		<meta name="keywords" content="individual, sample, object, flex, zone, gym">
+		<link href="project.css" rel="stylesheet" type="text/css"/>							<!--link to my css for formatting-->
+		<script src="project.js"></script>
+		<title>Flex Zone</title>															<!--sets the tab text on a window-->
+	</head>
+	<body>
+		<div id="wrapper">																	<!--wrapper used to pack everything together-->
+			<div id="login">																<!--div tag to create the login bar-->
+				<ul>
+					<li><a href="login.html">Login</a></li>									<!--login bar at the top-->
+					<li><a href="registration.html">Sign Up</a></li>
+				</ul>
+			</div>
+			<div id="header">																<!--header area where the name of the site is located with images-->
+				<div id="leftarm">															<!--container for the left arm-->
+					<img src="images/leftflex.png">
+				</div>
+				<div id="titleflex">														<!--container for the name of website. had to use nbsp because an actual space was causing the name to split into two lines on smaller resolutions-->
+					<h1>FLEX&nbsp;ZONE</h1>
+				</div>
+				<div id="rightarm">															<!--container for right bicep-->
+					<img src="images/rightflex.png">
+				</div>
+			</div>
+			<div id="menu">																	<!--container for the menu bar below the title which includes the search bar-->
+				<ul>																		<!--menu is created in a list to keep items in line with each other-->	
+					<a href="results_sample.html"><img src="images/searchicon.png"></a>		<!--users must press on the icon to search which currently brings them to the results page-->
+					<li><input type="search" placeholder="Search"></li>						<!--menu is listed backwards so it displays correctly from left to right-->
+					<li><a href="search.html">Home</a></li>
+					<li><a href="submission.html">Submit</a></li>
+					<li><a href="">Profile</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<div id="mainpage">
+				<div id="submission">															<!--container for the overall page-->
+					<div id="samplemap" style="width:100%;height:500px">	
+						<script src="https://maps.googleapis.com/maps/api/js?callback=mapSample"></script>
+					</div>
+					<table>																		<!--information is placed in a tabular format in order to keep it neat and organized-->
+						<tr>
+							<th>The Pulse Fitness Centre</th>									<!--title of the gym located at the top of the section-->
+						</tr>
+						<tr>																	<!--second row used to display coordinates of the gym and create the text to be a hyperlink that opens a new tab to google maps with the location set-->
+							<td>
+								<a href="https://www.google.ca/maps/place/David+Braley+Sport+Medicine+and+Rehabilitation+Centre+at+McMaster+University/@43.2644636,-79.9160332,18z/data=!3m1!5s0x882c9b54611c1201:0x4fcdd5667f653865!4m5!3m4!1s0x882c9b4d12232fe9:0xd27e5792b28a2803!8m2!3d43.2649601!4d-79.916564" target="_blank">43.2644636&deg N, -79.9160332&deg E</a> 
+							</td>
+						</tr>
+						<tr>																	<!--third row used to display average rating of the gym-->
+							<td>Rating: 9/10</td>
+						</tr>
+						<tr>
+							<td><img src="images/pulse1.jpg"></td>								<!--row to display a picture of the gym for aesthetics-->
+						</tr>
+						<tr>																	<!--row used to give users a description of the gym taken from the website-->
+							<td><p>Welcome to the Pulse Fitness Centre! The Pulse is McMaster University's fitness centre and we have just what you need to lead a healthy, and active lifestyle. Our certified staff members have the skills and enthusiasm to put you on the road to a healthier you, no matter what your current fitness level, what your individual interes are, what your personal goals are, or your limited availability. We offer numerous educational workshops and fitness programs that guarantee Fun, Friendship and Fitness!</p>
+								<p>A Pulse Membership includes access to all equipment, drop-in fitness and cycling classes as well as the Feather Family Climbing Wall. In addition, there is always at least one Personal Trainer monitoring the floor at all times so please do not hesitate to ask if you have a question or would like some assistance.</p>
+							</td>
+						</tr>
+					</table>
+					<div id="hoursreviews">															<!--container to keep the hours and reviews in line with one another-->
+						<div id="reviews">															<!--container for the reviews on the page-->
+							<h2>Reviews:</h2>
+							<table>																	<!--reviews displayed in a tabular format to keep it neat and organized-->
+								<tr>
+									<td>Jesse Truong</td>
+								</tr>
+								<tr>
+									<td>
+										<img src="images/maledefault.jpg">							<!--each user will have a default profile picture or they can upload their own-->
+									</td>															<!--below is the review the users have written-->
+									<td>I started going here in first year and I'm currently in my fourth. It's a great gym! There's a lot of equipment available and classes if you're interested in taking those. It might get a little crowded at times but it's not too bad.</td>
+									<td>Rating: 9/10</td>											<!--rating that the user has given the gym-->
+								</tr>
+								<tr>
+									<td>Karen Ngo</td>
+								</tr>
+								<tr>
+									<td>
+										<img src="images/femaledefault.jpg">
+									</td>
+									<td>I don't even go to the school but I like coming to the gym here. The guys around here are pretty cute and it's eye candy for when I'm working out. There are treadmills on the top floor that let you look down at the bottom floor so that's where I do most of my scouting. Also, the gym has female only hours so that's nice too!</td>
+									<td>Rating: 8/10</td>
+								</tr>
+								<tr>
+									<td>Jasman Gill</td>
+								</tr>
+								<tr>
+									<td>
+										<img src="images/maledefault.jpg">
+									</td>
+									<td>Working out isn't really my forte, however I like going on the treadmill. There are a lot of them. The staff there are nice too. That is all. Thanks for listening</td>
+									<td>Rating: 9/10</td>
+								</tr>
+								<tr>
+									<td>Barack Obama</td>
+								</tr>
+								<tr>
+									<td>
+										<img src="images/maledefault.jpg">
+									</td>
+									<td>When I'm not too busy running the United States of America, I like to come down to McMaster University and workout in their gym. Everyone tends to run away from me when I come in and I'm guessing it's partially due to the hundreds of secret service men there that are scaring them off. Once I retire come November, I'm going to move to Canada premanently so I can workout here all the time (also to avoid trump).</td>
+									<td>Rating: 9/10</td>
+								</tr>
+							</table>
+						</div>
+						<div id="hours">															<!--container for the hours of the gym-->
+							<h3>Hours</h3>
+							<table>																	<!--hours are created in a table in order to display in an orderly fashion-->
+								<tr>
+									<td>Sun</td>
+									<td>8:30AM - 9:30PM</td>
+								</tr>
+								<tr>
+									<td>Mon</td>
+									<td>6:00AM - 11:30PM</td>
+								</tr>
+								<tr>
+									<td>Tues</td>
+									<td>6:00AM - 11:30PM</td>
+								</tr>
+								<tr>
+									<td>Wed</td>
+									<td>6:00AM - 11:30PM</td>
+								</tr>
+								<tr>
+									<td>Thurs</td>
+									<td>6:00AM - 11:30PM</td>
+								</tr>
+								<tr>
+									<td>Fri</td>
+									<td>6:00AM - 11:30PM</td>
+								</tr>
+								<tr>
+									<td>Sat</td>
+									<td>8:30AM - 9:30PM</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					
+					<p><a href="">Load More Reviews...</a></p>									<!--hyperlink to load more reviews in the future-->
+				
+				</div>
+			</div>
+			<div id="footer">																<!--container for the footer that appears on every page-->
+				Jesse Truong&nbsp;1222722&nbsp;truonj8@mcmaster.ca
+			</div>
+		</div>
+		
+	</body>
+</html>

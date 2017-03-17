@@ -1,0 +1,63 @@
+<!--
+Name: 			Jesse Truong
+Student #: 		1222722
+Student ID: 	truonj8
+Project:		4WW3 - Project Part 2 - Client-Side, Dynamic
+Updated:		October 31st, 2016
+-->
+
+<!DOCTYPE html>																				<!--sets doc to HTML-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Jesse Truong">
+		<meta name="description" content="signup page for flex zone">
+		<meta name="keywords" content="signup, sign, up, flex, zone, gym">
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript" src="project.js"></script>
+		<link href="project.css" rel="stylesheet" type="text/css"/>							<!--link to my css for formatting-->
+		<title>Flex Zone</title>															<!--sets the tab text on a window-->
+	</head>
+	<body>
+		<div id="wrapper">																	<!--wrapper used to pack everything together-->
+			<div id="login">																<!--div tag to create the login bar-->
+				<ul>
+					<li><a href="login.html">Login</a></li>									<!--login bar at the top-->
+					<li><a href="registration.html">Sign Up</a></li>
+				</ul>
+			</div>
+			<div id="header">																<!--header area where the name of the site is located with images-->
+				<div id="leftarm">															<!--container for the left arm-->
+					<img src="images/leftflex.png">
+				</div>
+				<div id="titleflex">														<!--container for the name of website. had to use nbsp because an actual space was causing the name to split into two lines on smaller resolutions-->
+					<h1>FLEX&nbsp;ZONE</h1>
+				</div>
+				<div id="rightarm">															<!--container for right bicep-->
+					<img src="images/rightflex.png">
+				</div>
+			</div>
+			<div id="menu">																	<!--container for the menu bar below the title which includes the search bar-->
+				<ul>																		<!--menu is created in a list to keep items in line with each other-->	
+					<a href="results_sample.html"><img src="images/searchicon.png"></a>		<!--users must press on the icon to search which currently brings them to the results page-->
+					<li><input type="search" placeholder="Search"></li>						<!--menu is listed backwards so it displays correctly from left to right-->
+					<li><a href="search.html">Home</a></li>
+					<li><a href="submission.html">Submit</a></li>
+					<li><a href="">Profile</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<div id="mainpage">
+				<div id="contactpage">															<!--container for the main part of the page-->
+					<h2>Feel Free to Contact Us</h2>											<!--contact page was made to display student information-->
+					<p>Jesse Truong</p>
+					<p>1222722</p>
+					<p>truonj8@mcmaster.ca</p>
+				</div>
+				<div id="footer">																<!--container for the footer that appears on every page-->
+					Jesse Truong&nbsp;1222722&nbsp;truonj8@mcmaster.ca
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
